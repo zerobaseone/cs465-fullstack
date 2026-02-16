@@ -34,6 +34,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/api', (req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*'); // wildcard is not secure but keeping for now; 4200 is often used for other angular apps on my machine
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
   next();
 });
 

@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TripCardComponent } from '../trip-card/trip-card';
-import { Trip } from '../models/trip'; 
+import { Trip } from '../models/trip';
 import { TripData } from '../services/trip-data';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-trip-listing',
@@ -10,18 +11,23 @@ import { TripData } from '../services/trip-data';
   imports: [CommonModule, TripCardComponent],
   templateUrl: './trip-listing.html',
   styleUrl: './trip-listing.css',
-  providers: [TripData]
+  providers: [TripData],
+  host: { style: 'display: block;' },
 })
-
 export class TripListingComponent implements OnInit {
   trips: Trip[] = [];
-  message: string = ''; //not in guide p. 146
+  message: string = '';
 
-  constructor(private tripData: TripData) {
-    console.log('trip-listing constructor');
+  constructor(
+    private tripData: TripData,
+    private router: Router,
+    private cdr: ChangeDetectorRef
+  ) {}
+
+
+  public addTrip(): void {
+    this.router.navigate(['/add-trip']);
   }
-
-
 
   private getStuff(): void {
     this.tripData.getTrips().subscribe({
@@ -32,6 +38,7 @@ export class TripListingComponent implements OnInit {
         } else {
           this.message = 'No trips are available';
         }
+        this.cdr.detectChanges();
       },
       error: (error: any) => {
         console.error('Error fetching trips:', error);
@@ -41,7 +48,6 @@ export class TripListingComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log('ngOnInit');
     this.getStuff();
   }
 }
