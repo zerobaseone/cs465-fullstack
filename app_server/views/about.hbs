@@ -9,36 +9,7 @@
 <body>
 	<div id="background">
 		<div id="page">
-			<div id="header">
-				<div id="logo">
-					<a href="index.html"><img src="images/logo.png" alt="LOGO" height="100" width="200"></a>
-				</div>
-				<div id="navigation">
-					<ul>
-						<li>
-							<a href="index.html">Home</a>
-						</li>
-						<li>
-							<a href="travel.html">Travel</a>
-						</li>
-						<li>
-							<a href="rooms.html">Rooms</a>
-						</li>
-						<li>
-							<a href="meals.html">Meals</a>
-						</li>
-						<li>
-							<a href="news.html">News</a>
-						</li>
-						<li class="selected">
-							<a href="about.html">About</a>
-						</li>
-						<li>
-							<a href="contact.html">Contact</a>
-						</li>
-					</ul>
-				</div>
-			</div>
+			{{> header}}
 			<div id="contents">
 				<div class="box">
 					<div>
@@ -68,46 +39,14 @@
 							</p>
 							<h2>Template details</h2>
 							<p>
-								Design version 14. Code version 4. Website Template details, discussion and updates for this <a href="http://www.freewebsitetemplates.com/discuss/beachresort/">Travlr Getaways Web Template</a>. Website Template design by <a href="http://www.freewebsitetemplates.com/">Free Website Templates</a>. Please feel free to remove some or all the text and links of this page and replace it with your own About content.
+								Design version 14. Code version 4. Website Template details, discussion and updates for this <a href="http://www.freewebsitetemplates.com/discuss/beachresort/">Travlr Getaways Web Template</a>. Website Template design by <a href="http://www.freewebsitetemplates.com/">Free Website Templates</a>. Please feel free to remove some or all of the text and links of this page and replace it with your own About content.
 							</p>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div id="footer">
-			<div>
-				<ul class="navigation">
-					<li>
-						<a href="index.html">Home</a>
-					</li>
-					<li>
-						<a href="travel.html">Travel</a>
-					</li>
-					<li>
-						<a href="rooms.html">Rooms</a>
-					</li>
-					<li>
-						<a href="meals.html">Meals</a>
-					</li>
-					<li>
-						<a href="news.html">News</a>
-					</li>
-					<li class="active">
-						<a href="about.html">About</a>
-					</li>
-					<li>
-						<a href="contact.html">Contact</a>
-					</li>
-				</ul>
-				<div id="connect">
-					<a href="http://pinterest.com/fwtemplates/" target="_blank" class="pinterest"></a> <a href="http://freewebsitetemplates.com/go/facebook/" target="_blank" class="facebook"></a> <a href="http://freewebsitetemplates.com/go/twitter/" target="_blank" class="twitter"></a> <a href="http://freewebsitetemplates.com/go/googleplus/" target="_blank" class="googleplus"></a>
-				</div>
-			</div>
-			<p>
-				© 2023 by Travlr Getaways. All Rights Reserved
-			</p>
-		</div>
+		{{> footer}}
 	</div>
 </body>
 </html>
