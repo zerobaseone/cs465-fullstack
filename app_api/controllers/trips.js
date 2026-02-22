@@ -61,6 +61,15 @@ const tripsAddTrip = async (req, res) => {
     }
 };
 
+// DELETE: /trips/id/:_id - delete a trip by _id
+const tripsDeleteTrip = async (req, res) => {
+    const q = await Model.deleteOne({ '_id': req.params._id }).exec();
+    if (!q.deletedCount) {
+        return res.status(404).json({ message: 'Trip not found' });
+    }
+    return res.status(204).send();
+};
+
 // PUT: /trips/:tripCode - update an existing trip
 const tripsUpdateTrip = async (req, res) => {
     const q = await Model
@@ -95,5 +104,6 @@ module.exports = {
     tripsList,
     tripsFindByCode,
     tripsAddTrip,
+    tripsDeleteTrip,
     tripsUpdateTrip
 };

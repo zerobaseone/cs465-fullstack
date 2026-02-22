@@ -18,6 +18,10 @@ router
     .get(tripsController.tripsFindByCode)
     .put(authenticateJWT, tripsController.tripsUpdateTrip);
 
+router
+    .route("/trips/id/:_id")
+    .delete(authenticateJWT, tripsController.tripsDeleteTrip);
+
 // define route for login endpoint
 router
     .route('/login')

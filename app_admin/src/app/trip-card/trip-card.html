@@ -8,12 +8,13 @@
             {{trip.resort}}
         </h6>
         <p class="card-subtitle mt-3 mb-3 text-muted">
-            {{trip.length}} <br> {{trip.perPerson|currency:'USD':'symbol'}} per person
+            {{trip.length}} <br> {{ getPerPersonNumber(trip.perPerson) | currency:'USD':'symbol' }} per person
         </p>
         <p class="card-text" [innerHTML]="trip.description">
         </p>
         <div *ngIf="isLoggedIn()">
             <button (click)="editTrip(trip)" class="btn btn-primary">Edit Trip</button>
+            <button (click)="deleteTrip(trip)" class="btn btn-danger ms-2">Delete Trip</button>
         </div>
     </div>
 </div>
