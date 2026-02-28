@@ -6,6 +6,8 @@ CS-465 Full Stack Development with MEAN
 Compare and contrast the types of frontend development you used in your full stack project, including Express HTML, JavaScript, and the single-page application (SPA).
 Why did the backend use a NoSQL MongoDB database?
 
+I found MongoDB to be a powerful and flexible solution in contrast to the rigidity of a relational database, and the document format worked well with what we were using the database for (trip cards)
+
 ## Functionality ##
 
 How is JSON different from Javascript and how does JSON tie together the frontend and backend development pieces?
