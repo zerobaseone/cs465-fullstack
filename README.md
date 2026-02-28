@@ -18,3 +18,5 @@ Methods for request and retrieval necessitate various types of API testing of en
 ## Reflection ##
 
 How has this course helped you in reaching your professional goals? What skills have you learned, developed, or mastered in this course to help you become a more marketable candidate in your career field?
+
+It was incredibly valuable to have the experience of refactoring an older static site into modern technologies by utilizing the MEAN stack. Not only does that reflect real-world situations of working with someone else's codebase,  but I had the chance to learn several new technologies (Namely Angular/Express) and revisit topics I'd learned about before (HTML/CSS, React, MongoDB). In addition to the frameworks used, I also got experience using the Postman platform for testing API calls, and MongoDB Compass for working with the database.  
